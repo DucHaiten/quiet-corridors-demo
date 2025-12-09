@@ -1,0 +1,7 @@
+{
+  "name": "Quiet-2",
+  "description": "A 3D First-Person Brawler inspired by street fighting games. Features WASD movement, melee combat mechanics, dynamic enemies, and AI-generated mission intelligence.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

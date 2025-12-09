@@ -1,0 +1,54 @@
+
+{
+  "name": "counter-react:-street-brawler",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "electron.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron": "wait-on tcp:3000 && electron . --dev",
+    "electron:dev": "concurrently -k \"npm run dev\" \"npm run electron\"",
+    "electron:build": "npm run build && electron-builder"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "@react-three/fiber": "^9.4.0",
+    "three": "^0.181.2",
+    "@react-three/drei": "^10.7.7",
+    "zustand": "^5.0.8",
+    "@react-three/cannon": "^6.6.0",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0",
+    "electron": "^28.2.0",
+    "electron-builder": "^24.9.1",
+    "concurrently": "^8.2.2",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.mazerunner.game",
+    "productName": "Silent Labyrinth",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron.js",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
