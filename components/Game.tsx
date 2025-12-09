@@ -111,7 +111,7 @@ const SolidBackground = ({ color }: { color: string }) => {
 // Skybox / environment map for the level
 const SkyEnvironment = ({ onColorPick }: { onColorPick?: (color: string) => void }) => {
     const { scene, gl } = useThree();
-    const texture = useLoader(THREE.TextureLoader, '/images/all_sky/Cold%20Night%20Equirect.png');
+    const texture = useLoader(THREE.TextureLoader, '/images/all_sky/cold_night_equirect.png');
 
     useEffect(() => {
         if (!texture) return;
